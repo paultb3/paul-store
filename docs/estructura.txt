@@ -1,0 +1,36 @@
+/mi-tienda-virtual
+├── /public
+│   ├── /assets
+│   │   ├── /images
+│   │   ├── /fonts
+│   │   └── /icons
+│   └── index.html            # Página principal
+├── /src
+│   ├── /core
+│   │   ├── /domain
+│   │   │   ├── /entities        # Clases y objetos que representan el dominio (producto, usuario, carrito, etc.)
+│   │   │   ├── /valueObjects    # Objetos de valor, como direcciones, precios, etc.
+│   │   │   └── /services        # Servicios de lógica de negocio, como cálculo de precios, validaciones, etc.
+│   │   ├── /application
+│   │   │   ├── /useCases        # Casos de uso de la aplicación (procesar pago, agregar producto al carrito, etc.)
+│   │   │   └── /ports           # Interfaz que expone el dominio a los adaptadores (ej. interfaz para manejar el pago)
+│   │   └── /infrastructure
+│   │       ├── /adapters        # Adaptadores que conectan el dominio con el mundo exterior (ej. API, base de datos)
+│   │       └── /repositories    # Repositorios que manejan la persistencia de datos (bases de datos, almacenamiento local)
+│   ├── /ui
+│   │   ├── /components         # Componentes reutilizables de la UI (botones, formularios, etc.)
+│   │   ├── /pages              # Páginas de la aplicación (carrito, tienda, checkout, etc.)
+│   │   └── /styles             # CSS o archivos SASS
+│   ├── /utils
+│   │   └── /helpers            # Funciones de ayuda y utilidades
+│   ├── /config
+│   │   └── config.js           # Configuración general de la app (entornos, rutas, etc.)
+│   ├── /main.js                # Punto de entrada de la app (importa todo y enlaza los adaptadores con los puertos)
+├── /tests
+│   ├── /unit                   # Pruebas unitarias
+│   ├── /integration            # Pruebas de integración
+│   └── /e2e                    # Pruebas end-to-end (por ejemplo, tests del flujo de compra)
+├── /docs                        # Documentación adicional (especificaciones, arquitecturas, etc.)
+├── /node_modules                # Dependencias (si usas Node.js, como un bundler o un servidor)
+├── package.json                 # Dependencias y scripts del proyecto
+└── README.md                    # Descripción del proyecto
